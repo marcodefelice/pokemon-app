@@ -5,8 +5,8 @@ Piccola e preve applicazione di TEST per permettere la creazione e modifica di u
 Node.js versione > 16.*
 
 Installazione
-* Clona il repository sul tuo computer con il comando git clone https://github.com/NOME-REPOSITORY.git.
-* Entra nella directory del repository con il comando cd NOME-REPOSITORY.
+* Clona il repository sul tuo computer con il comando git clone https://github.com/pokemon-app.git.
+* Entra nella directory del repository con il comando cd pokemon-app.
 * Creazione del container dockerfile
   docker-compose up -d
 
