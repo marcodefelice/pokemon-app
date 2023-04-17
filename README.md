@@ -1,38 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pokemon test App
+Piccola e preve applicazione di TEST per permettere la creazione e modifica di un team polemon
 
-## Getting Started
+## Requisiti
+Node.js versione > 16.*
 
-First, run the development server:
+Installazione
+* Clona il repository sul tuo computer con il comando git clone https://github.com/NOME-REPOSITORY.git.
+* Entra nella directory del repository con il comando cd NOME-REPOSITORY.
+* Creazione del container dockerfile
+  docker-compose up -d
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Utilizzo
+* Lancia il server su http://localhost:8888
+* Accedi alla pagina di creazione delle squadre.
+* Seleziona i Pokémon che desideri aggiungere alla tua squadra cliccando sul bottone GottaCatch.
+* Visualizza la tua squadra nella pagina delle squadre salvate.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rotte
+* GET / visualizza la homepage dell'applicazione.
+* GET /team/create pagina per la creazione dei teams
+* GET /team/list visualizza la sita dei teams
+* GET /team/:teamId:/edit modifica un specifico team
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## API
+* GET /api/getPokemons ritorna in modo randomico un pokemon
+* POST /api/savePokemon aggiorna o crea un nuovo dato
+* DELETE /api/savePokemon elimina il dato specifico
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Struttura delle directory
+_ node_modules: contiene tutte le dipendenze del progetto installate tramite npm.
+_ public: contiene file statici accessibili direttamente dal client (es. immagini, file CSS, JavaScript).
+_ data: contiene i dati salvati dall'applicazione in formato JSON
+_ components: contiene i componenti dell'applicazione.
+__ buttons: contiene i pulsanti e le action dell'applicazione.
+__ cards: contiene le card specifiche e stilizzate
+__ table: contiene tabelle ed elementi tabellari per le pagine
+_ pages: contiene le views dell'applicazione
+_ services: qui vengono implementati tutti i vari servizi
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Tecnologie utilizzate
+NEXT.js
+Docker
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Autori
+* Marco De Felice
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Licenza
+Apache License, Version 2.0

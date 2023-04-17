@@ -1,0 +1,15 @@
+version: "2"
+services:
+  node:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    user: "node"
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/app
+    ports:
+      - 8888:3000
+    command: "npm run dev"
