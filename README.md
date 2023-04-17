@@ -1,5 +1,5 @@
 # Pokemon test App
-Piccola e preve applicazione di TEST per permettere la creazione e modifica di un team polemon
+Piccola e preve applicazione di TEST per permettere la creazione e modifica di un team pokemon
 
 ## Requisiti
 Node.js versione > 16.*
